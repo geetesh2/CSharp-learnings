@@ -10,7 +10,7 @@
     {
         return x * x * x;
     }
-    public static void Main(string[] args)
+    public static void main(string[] args)
     {
         Transfomer transform = Square;
         transform += Cube;
@@ -20,6 +20,8 @@
            return x * x;
         };
 
-        Console.WriteLine(transform(10)); // 100
+        Transfomer transfrom3 = (int x) => x * x; // (x) => x * x; // type inference
+
+        Console.WriteLine(transfrom3(10)); // 100
     }
 }
